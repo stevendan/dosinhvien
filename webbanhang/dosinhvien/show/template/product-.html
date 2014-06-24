@@ -1,0 +1,21 @@
+{% extends "base.htm" %}
+
+
+{% block content %}
+<style>
+    .image{
+        width: 350px;
+        height: 350px;
+        float: left;
+    }
+
+</style>
+<div class="item">
+    <img class="image" src="{{product.image}}"/>
+
+    <h1 class="name">Tên sản phẩm: {{product.name}}</h1>
+    </br>
+    <h2 class="price"> Giá: {{product.price}} VNĐ </h2>
+    <p class="desciption"> Mô tả: {{product.description|lower}} </p>
+</div>
+{% endblock %}

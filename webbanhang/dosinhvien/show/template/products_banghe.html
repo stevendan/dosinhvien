@@ -1,0 +1,16 @@
+{% extends "show-base.html" %}
+{%block title%}
+        Bàn ghế
+{% endblock %}
+{% block item %}
+        {% if product.category_id == 5 %}
+            <div class="item">
+                <img class="image" src = "{{product.image}}"/>
+                <h2>
+
+                    <a  href='/show/get/{{product.id}}/'> {{product.name}} </a>
+                </h2>
+                <p> {{product.description|lower|truncatewords:"10"}} </p>
+            </div>
+        {% endif %}
+{% endblock %}

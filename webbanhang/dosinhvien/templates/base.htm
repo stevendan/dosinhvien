@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>{%block title %} Trang Chủ {% endblock %}</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %} "/>
+    </head>
+
+    <body>
+    <div class="clr"> </div>
+    <!-- TOP START -->
+    	<div class="top">
+        	<a href="/show/all"><img src="{% static 'images/logo_.png' %}" /></a>
+        </div>
+    <!-- TOP END -->
+    <div class="clr"> </div>
+    <!-- MENU START -->
+    	<div class="menu">
+        <ul class="tab">
+        	<li><a href="/show/all"> Trang Chủ</a></li>
+            <li class="divider"> </li>
+            <li><a href="#"> Đồ dùng</a></li>
+            <li class="divider"> </li>
+            <li><a href="#"> Nhà Trọ</a></li>
+            <li class="divider"> </li>
+            <li><a href="#"> Đăng Nhập</a></li>
+            <li class="divider"> </li>
+            <li><a href="#"> Đăng Ký</a></li>
+            <li class="divider"> </li>
+            <li><a href="/admin"> Admin </a></li>
+            <li class="divider"> </li>
+        </ul>
+        </div>
+    <!-- MENU END -->
+    <div class="clr"> </div>
+    <div class="divider_2_panel"> </div>
+    	<!-- CONTENT END -->
+    		<div class="content">
+        	<!-- CONTENT LEFT START -->
+            <div class="content_left">
+        		<div class="menu_vertical">
+            	<div class="title"> Danh Mục Chi Tiết</div>
+           		<div class="divider"> </div>
+
+                <ul class="ver_menu">
+                    <li> <a href="/show/laptop"> Laptop </a> </li>
+                    <li> <a href="/show/dienthoai"> Điện Thoại </a> </li>
+                    <li> <a href="/show/phukien"> Phụ Kiên PC </a> </li>
+                    <li> <a href="/show/sach"> Sách </a> </li>
+                    <li> <a href="/show/banghe"> Bàn Ghế </a> </li>
+                    <li> <a href="/show/khac"> Khác </a> </li>
+                </ul>
+            </div>
+
+        	</div>
+        <!-- CONTENT LEFT END -->
+
+        <!-- CONTENT RIGHT START -->
+            <div class="content_right">
+                {% block content %}
+                {% endblock %}
+
+        	</div>
+        <!-- CONTENT RIGHT END -->
+    </div>
+    <!-- CONTENT END -->
+
+    </body>
+</html>

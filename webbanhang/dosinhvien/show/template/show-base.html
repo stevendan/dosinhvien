@@ -1,0 +1,37 @@
+{% extends "base.htm" %}
+{%block title%}
+        Danh mục chi tiết
+{% endblock %}
+{% block content %}
+    {% if products > 0 %}
+
+    {% for product in products %}
+        <style>
+        .item {
+            width: 200px;
+            height: 200px;
+            float: left;
+            border: 1px solid #c9c8c9;
+            margin: 25px;
+            -webkit-border-radius: 1em;
+        }
+        .image {
+            width: 180px;
+            height: 100px;
+            }
+        </style>
+        {%block item %}
+            <div class="item">
+                <img class="image" src = "{{product.image}}"/>
+                <h2>
+
+                    <a  href='/show/get/{{product.id}}/'> {{product.name}} </a>
+                </h2>
+                <p> {{product.description|lower|truncatewords:"10"}} </p>
+            </div>
+        {% endblock %}
+    {% endfor %}
+    {% else %}
+            <h1> No product to show </h1>
+    {% endif%}
+{% endblock %}
